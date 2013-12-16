@@ -46,7 +46,7 @@
 
 	// For testing, randomize and truncate
 	// shuffle($domains);
-	$domains = array_slice( $domains, 0, 15 );
+	// $domains = array_slice( $domains, 0, 15 );
 
 	// Identify the headers we'd like to list
 	// Additionally, we'll be storing statistical info in $directive_use
