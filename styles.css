@@ -1,17 +1,36 @@
+/*
+	TODO: Convert all of this to scss or less
+*/
 body {
-	display: table;
-	margin: 0 auto;
 	font-family: Arial;
 	font-size: 1em;
 	padding: 1em;
 	box-shadow: 0 .2em 3em rgba(0, 0, 0, .25);
 }
 
+meter {
+	width: 100%;
+	-webkit-transition: opacity 2s;
+	-moz-transition: opacity 2s;
+	transition: all 2s;
+}
+
+meter[value='100'],
+meter[value='5'] {
+	opacity: 0;
+}
+
+/* Using flexbox here, even though I would not
+   do so in the wild just yet.
+*/
 .row {
-	display: table-row;
+	display: flex;
+	padding: 0;
+	margin: 0;
 }
 
 .row .cell {
+	flex: 1;
 	display: table-cell;
 	padding: .5em 1em;
 	border-bottom: 1px solid #CCC;
@@ -34,16 +53,31 @@ body {
 	text-align: center;
 	background: #00acee;
 	color: #FFF;
-	border-radius: .25em .25em 0 0;
-}
-
-.row.header :first-child {
-	border-top-left-radius: .5em;
-}
-.row.header :last-child {
-	border-top-right-radius: .5em;
 }
 
 .row:nth-of-type(2n) {
 	background: #f1f1f1;
+}
+
+.box.summary {
+	width: 300px;
+	background: rgba(255, 255, 255, .85);
+	position: fixed;
+	top: 50%; left: 50%;
+	-webkit-transform: translateY(-50%) translateX(-50%);
+	-moz-transform: translateY(-50%) translateX(-50%);
+	transform: translateY(-50%) translateX(-50%);
+	box-shadow: 0 .25em 1em rgba(0,0,0,.25);
+}
+
+.box.summary h1 {
+	margin: 0;
+	padding: .25em 1rem;
+	background: #00acee;
+	color: #fff;
+	font-weight: normal;
+}
+
+.box.summary p {
+	padding: 0 1rem;
 }
