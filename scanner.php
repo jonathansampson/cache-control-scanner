@@ -37,7 +37,7 @@
 	</script>
 <?php
 
-	// Allow this script to run longer than 30 seconds
+	// Lots of domains to query, turn off time limits
 	set_time_limit(-1);
 
 	// Resources and Helpers

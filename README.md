@@ -11,7 +11,7 @@ The front-end of this was somewhat rushed; and should be revisited to ensure gre
 
 ### Setup
 
-You will need to be running WAMP Server, MAMP, PHP's Built-in CLI Server, or some other PHP-capable server. Ensure that openssl is enabled; you can do this in php.ini by uncommenting the corresponding .dll and restarting your server.
+You will need to be running WAMP Server, MAMP, PHP's Built-in CLI Server, or some other PHP-capable server. Ensure that openssl is enabled; you can do this in php.ini by uncommenting the corresponding .dll and restarting your server. Additionally, make sure that implicit flush is enabled as well.
 
 1. Clone this repo
 2. Navigate to your local webserver and access scanner.php
