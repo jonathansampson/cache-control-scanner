@@ -37,6 +37,9 @@
 	</script>
 <?php
 
+	// Allow this script to run longer than 30 seconds
+	set_time_limit(-1);
+
 	// Resources and Helpers
 	require "domains.php";
 	require "functions.php";
